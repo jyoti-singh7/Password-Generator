@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="display-container">
+             <!-- the word data we have used to define custom attribute(it works like class or id) on which basis we will later apply css and js properties -->
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+            <button class="copyBtn" data-copy>
+                 <!-- the word data we have used to define custom attribute(it works like class or id) on which basis we will later apply css and js properties -->
+                <span class="tooltip" data-copyMsg></span>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAIVBMVEX///8AAAB/f3+VlZXm5uYKCgqYmJjp6emxsbE/Pz+0tLRF72H3AAABTUlEQVR4nO3cSU7DUBRE0Th92P+CYYIYpKFU+NuKOWcB37rTkvx2OwAAAAAAAADuHQ/7kQ7HhTqup2ms03WRjuPojq+SyxIhh+Ed03ReImS/QMheiJANhAx5XEhBSEJIQUhCSEFIQkhBSEJIQUhCyCtPdrjb98dG7HAjQlbZ4QaErLPDDQhZZ4cbELLOWCJEyPuFzPjkDyEFIQkhBSEJIQUhCSEFIQkhBSEJIQUhCSEFIQkhBSEJIQUhCSEFIQkhBSEJIQUhCSEFIQkhBSEJIQUhCSEFIQkhBSEJIQUhCSEFIQkhBSGJ6RdCHhCS+Dchc15zWjNk1vtaK4acPub81hIht4f/vp7nvXf2fv8WPyEkIaQgJCGkICQhpCAkIaQgJCGksLmQkYQIeeeQzVxV38yd+wUuns26w71wOf/1zNxLM+9wAAAAAAAAAFvxCYVKFeGyi71XAAAAAElFTkSuQmCC" alt="copy" width="23" height="23">
+            </button>
+        </div>
+        <div class="input-container">
+            <div class="length-container">
+                <p>Password Length</p>
+                <!-- the word data we have used to define custom attribute(it works like class or id) on which basis we will later apply css and js properties -->
+                <p data-lengthNumber>0</p> 
+                <!-- the number '0' will be chabged later(using js) according to the neessity -->
+            </div>
+            <!-- slider for length change -->
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+            <!-- checkboxes -->
+            <div class="check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Includes Uppercase Letters</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Includes Lowercase Letters</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Includes Numbers</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Includes Symbols</label>
+            </div>
+            <!-- strentyh section -->
+            <div class="strength-container">
+                <p>Strength</p>
+                <div class="indicator" data-indicator></div>
+            </div>
+            <!-- generate password button -->
+            <button class="generateButton">Generate Password</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
